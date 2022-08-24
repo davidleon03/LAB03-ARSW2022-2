@@ -28,7 +28,11 @@ public class Consumer extends Thread{
                 int elem=queue.poll();
                 System.out.println("Consumer consumes "+elem);                                
             }
-            
+            try {
+                this.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

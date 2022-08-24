@@ -43,8 +43,10 @@ public class Immortal extends Thread {
 
             im = immortalsPopulation.get(nextFighterIndex);
 
+            /*synchronized (immortalsPopulation){
+                this.fight(im);
+            }*/
             this.fight(im);
-
             try {
                 Thread.sleep(1);
             } catch (InterruptedException e) {
