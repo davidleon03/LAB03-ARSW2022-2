@@ -23,12 +23,21 @@ public class ServidorThread extends Thread {
 	public void run() {
 		int ocurrencesCount = 0;
 		blackList=new LinkedList<>();
-		for (int i=ini;i<fin && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
-			check++;
-			if (skds.isInBlackListServer(i, ip)){
-
-				blackList.add(i);
-				ocurriencias++;
+		synchronized (blackList) {
+			for (int i=ini;i<fin && ocurrencesCount<BLACK_LIST_ALARM_COUNT;i++){
+				check++;
+				if (skds.isInBlackListServer(i, ip)){
+					blackList.add(i);
+					ocurriencias++;
+				}
+				if(numeroOcurrencias() == 5) {
+					try {
+						this.wait();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
 			}
 		}
 
