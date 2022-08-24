@@ -2,6 +2,9 @@
 ## Escuela Colombiana de Ingeniería
 ### Arquitecturas de Software – ARSW
 
+## Integrantes:
+### Yesid Santiago Carrillo
+### David Alejandro Leon
 
 #### Ejercicio – programación concurrente, condiciones de carrera y sincronización de hilos. EJERCICIO INDIVIDUAL O EN PAREJAS.
 
