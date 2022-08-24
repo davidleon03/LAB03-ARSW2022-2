@@ -12,9 +12,11 @@ Control de hilos con wait/notify. Productor/consumidor.
 1. Revise el funcionamiento del programa y ejecútelo. Mientras esto ocurren, ejecute jVisualVM y revise el consumo de CPU del proceso correspondiente. A qué se debe este consumo?, cual es la clase responsable?
 
 - Antes 
+![image](https://user-images.githubusercontent.com/90295307/186422605-1e3a7f68-2c61-44dd-9ee3-6bff0adf6f2a.png)
 
 
 - Despues 
+![image](https://user-images.githubusercontent.com/90295307/186422647-096f1791-1f2f-453f-8c9a-3aeb43f0e6ec.png)
 
 
 2. Haga los ajustes necesarios para que la solución use más eficientemente la CPU, teniendo en cuenta que -por ahora- la producción es lenta y el consumo es rápido. Verifique con JVisualVM que el consumo de CPU se reduzca.
