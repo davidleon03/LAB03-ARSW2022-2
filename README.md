@@ -12,14 +12,20 @@ Control de hilos con wait/notify. Productor/consumidor.
 1. Revise el funcionamiento del programa y ejecútelo. Mientras esto ocurren, ejecute jVisualVM y revise el consumo de CPU del proceso correspondiente. A qué se debe este consumo?, cual es la clase responsable?
 
 - Antes 
-![image](https://user-images.githubusercontent.com/90295307/186422605-1e3a7f68-2c61-44dd-9ee3-6bff0adf6f2a.png)
+![image](https://user-images.githubusercontent.com/90295307/186426931-93808b02-58ac-445c-888d-013fff463eb2.png)
+
 
 
 - Despues 
-![image](https://user-images.githubusercontent.com/90295307/186422647-096f1791-1f2f-453f-8c9a-3aeb43f0e6ec.png)
+![image](https://user-images.githubusercontent.com/90295307/186427475-aa20d1b9-6b79-488e-b7dd-5c5be959eda9.png)
 
+- La clase responsable es Producer ya que es la encargada de producer la cola de integers.
 
 2. Haga los ajustes necesarios para que la solución use más eficientemente la CPU, teniendo en cuenta que -por ahora- la producción es lenta y el consumo es rápido. Verifique con JVisualVM que el consumo de CPU se reduzca.
+
+![image](https://user-images.githubusercontent.com/90295307/186430252-8ccd0ddf-ea50-4ec3-ab28-2fc8025a667d.png)
+![image](https://user-images.githubusercontent.com/90295307/186430253-d50f946f-b638-403c-a1d0-98417be7f2ec.png)
+
 3. Haga que ahora el productor produzca muy rápido, y el consumidor consuma lento. Teniendo en cuenta que el productor conoce un límite de Stock (cuantos elementos debería tener, a lo sumo en la cola), haga que dicho límite se respete. Revise el API de la colección usada como cola para ver cómo garantizar que dicho límite no se supere. Verifique que, al poner un límite pequeño para el 'stock', no haya consumo alto de CPU ni errores.
 
 
