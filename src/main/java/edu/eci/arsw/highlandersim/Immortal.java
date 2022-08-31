@@ -81,7 +81,7 @@ public class Immortal extends Thread {
         }
 
     }
-
+    // Se remueve el inmortal de la lista si su vida es menor a 0 porque esta muerto
     public void changeHealth(int v) {
     	if(this.health > 0) {
     		health = v;
